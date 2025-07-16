@@ -130,7 +130,7 @@ export default function Card({ post }) {
           <h3 className="text-lg font-bold mb-2">{post.title}</h3>
           <p className="text-sm mb-3">{post.description}</p>
           {post.imageURL && (
-            <div className="w-full h-52 bg-blue-700 rounded-lg mb-3 overflow-hidden flex items-center justify-center">
+            <div className="w-full h-full bg-blue-700 rounded-lg mb-3 overflow-hidden flex items-center justify-center">
               <img
                 src={post.imageURL}
                 alt="post"

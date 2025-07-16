@@ -1,16 +1,30 @@
 import React, { useContext } from "react";
 import { NavLink } from "react-router";
 import { UserContext } from "../context/UserProvider";
+import { DrawerIcon } from "../icons/DrawerIcon";
 
-export default function Navbar() {
+export default function Navbar({
+  onMenuClick = () => {},
+  isDrawerOpen = false,
+}) {
   const { isAuthenticated, currentUser } = useContext(UserContext);
+
   return (
-    <nav className="flex justify-between items-center px-8 py-4 bg-blue-700 shadow-lg">
-      <NavLink
-        to="/"
-        className="text-2xl font-extrabold text-white tracking-wide hover:text-blue-200 transition duration-200">
-        Blog
-      </NavLink>
+    <nav className="fixed top-0 left-0 right-0 z-50 flex justify-between items-center px-4 sm:px-8 py-4 bg-blue-700 shadow-lg">
+      <div className="flex items-center gap-4">
+        <button
+          onClick={onMenuClick}
+          className="sm:hidden text-white p-2 rounded-md">
+          <DrawerIcon />
+        </button>
+
+        <NavLink
+          to="/"
+          className="text-2xl font-extrabold text-white tracking-wide hover:text-blue-200 transition duration-200">
+          Blog
+        </NavLink>
+      </div>
+
       {isAuthenticated ? (
         <NavLink to="/profile">
           <img

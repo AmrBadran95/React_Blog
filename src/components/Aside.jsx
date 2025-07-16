@@ -11,7 +11,7 @@ export default function Aside() {
     "flex items-center gap-3 mb-4 p-3 rounded-md cursor-pointer bg-blue-500 hover:bg-blue-700 text-white transition-all";
 
   return (
-    <aside className="w-full sm:w-60 p-4 bg-white h-full">
+    <aside className="w-full sm:w-60 p-4 bg-white h-full sm:h-full overflow-y-auto">
       <NavLink to="/" className={buttonClasses}>
         <HomeIcon />
         <div className="text-sm font-medium">Home</div>

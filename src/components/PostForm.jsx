@@ -118,7 +118,7 @@ export const PostForm = () => {
           resetForm();
           modalRef.current?.showModal();
         }}
-        className="btn bg-blue-500 hover:bg-blue-700 rounded-full w-14 h-14 text-2xl text-white fixed bottom-2 right-2 z-50 shadow-lg flex items-center justify-center">
+        className="btn bg-blue-500 hover:bg-blue-700 rounded-full w-14 h-14 text-2xl text-white fixed bottom-6 right-6 z-[9999] shadow-xl flex items-center justify-center">
         +
       </button>
 

@@ -100,7 +100,7 @@ export default function Card({ post }) {
             onChange={(e) => setEditedTitle(e.target.value)}
           />
           <textarea
-            className="w-full rounded-md p-2 text-black"
+            className="w-full rounded-md p-2 text-black bg-gray-50"
             rows="3"
             value={editedDescription}
             onChange={(e) => setEditedDescription(e.target.value)}
